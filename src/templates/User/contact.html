@@ -1,0 +1,16 @@
+{% extends "./layouts/base.html" %}
+
+{% block 'content' %}
+    <h1> Contact Page</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ forms.non_field_errors }}
+            <div class="form-group">
+                <label></label>
+                {{ forms }}
+            </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+{% endblock 'content' %}
+
